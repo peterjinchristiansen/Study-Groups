@@ -7,7 +7,6 @@ import { AiOutlineDownload } from 'react-icons/ai'
 const Form = ({ variant }) => {
     const [formData, setFormData] = useState({})
     const [picture, setPicture] = useState({ name: null })
-    const [photoIntent, setPhotoIntent] = useState(false)
     const location = useLocation()
     const formRef = useRef()
     useEffect(() => {
@@ -38,7 +37,6 @@ const Form = ({ variant }) => {
 
     const handlePhoto = (event) => {
         setPicture(event.target.files[0])
-        setPhotoIntent(true)
     }
   
     const renderInputs = ({ id, name, type, placeholder, message }) => {
@@ -55,6 +53,7 @@ const Form = ({ variant }) => {
                         />
                         Upload File <AiOutlineDownload />
                     </label>
+                    <p className={style.label}>{picture.name ? 'File successfully uploaded!' : 'No filed uploaded...'}</p>
                 </div>
             )
         }
@@ -83,7 +82,7 @@ const Form = ({ variant }) => {
             <form onSubmit={handleSubmit} ref={formRef}>
                 <h1 className={style.heading}>{variant}</h1>
                 {inputs.map(input => renderInputs(input))}        
-                <button>{!picture.name && photoIntent ? 'Loading...' : buttonText}</button>
+                <button>{buttonText}</button>
             </form>
         </div>
     )
