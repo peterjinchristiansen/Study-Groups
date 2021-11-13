@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Courgette&family=Exo+2&family=IM+Fell+English+SC&family=Merienda&family=Permanent+Marker&display=swap');
+
+:root {
+    --sky: #7bdff2ff;
+    --celeste: #b2f7efff;
+    --mint: #eff7f6ff;
+    --pink: #f7d6e0ff;
+    --candy: #f2b5d4ff;
+    --ruby: #a31621ff;
+    --beau: #bfdbf7ff;
+    --dye: #053c5eff;
+    --seaweed: #1f7a8cff;
+    --red: #db222aff;
+
+    --default: 'Exo 2', sans-serif;
+    --logo: 'Merienda', cursive;
+    --heading: 'Permanent Marker', cursive;
+    --fancy: 'Courgette', cursive;
+    --handwriting: 'Architects Daughter', cursive;
+    --old: 'IM Fell English SC', serif;
+}
+
+* {
+    font-family: var(--default);
+    margin: 0;
+    padding: 0;
+}
