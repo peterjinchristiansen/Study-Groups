@@ -64,7 +64,7 @@ const Reference = () => {
     }
 
     const getFont = ({variable, font}) => {
-        return <h2 style={{fontFamily: font}}>{variable}</h2>
+        return <h2 key={font} style={{fontFamily: font}}>{variable}</h2>
     }
 
     return(
