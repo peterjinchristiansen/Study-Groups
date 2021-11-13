@@ -1,0 +1,98 @@
+.form {
+    background-color: var(--mint);
+    margin: 10vh auto;
+    max-width: 500px;
+    padding: 5vh;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.heading {
+    font-family: var(--heading);
+    margin-bottom: 5vh;
+}
+
+.container {
+    margin: 3vh;
+}
+
+.label {
+    font-size: 1.2rem;
+}
+
+.input {
+    margin-top: 1.5vh;
+    padding: 10px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    width: 50%;
+    border: 2px solid var(--beau);
+    background-color: white;
+    transition: width 1s, border-color 1s;
+}
+  
+.input:focus {
+    width: 100%;
+    outline: 0;
+    border-color: var(--dye);
+}
+
+.input:not([type='password']), .input[type='password']::placeholder {
+    font-family: var(--handwriting)!important;
+    font-size: 1rem!important;
+    font-weight: 600;
+}
+
+.input[type='password'] {
+    font: small-caption;
+    font-size: 16px;
+}
+
+.fileInput {
+    margin-top: 1.5vh;
+    border-radius: 10px;
+    background-color: var(--ruby);
+    color: white;
+    font-size: 2rem;
+    font-family: var(--old);
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.fileInput:hover {
+    background-color: var(--red);
+    color: var(--sky);
+}
+
+.fileHeading {
+    font-family: var(--heading);
+    margin-bottom: 5vh;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.fileInput {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 5vh;
+    padding: 7px;
+    background-color: var(--sky);
+    color: var(--red);
+    font-size: 1.5rem;
+    border-radius: 5px;
+    font-family: var(--old);
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--red);
+    color: var(--sky);
+}

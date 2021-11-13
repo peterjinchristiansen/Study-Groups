@@ -52,7 +52,7 @@ const fonts = [
 ]
 
 const Reference = () => {
-    const getColor = ({ name, code }) => {
+    const renderColor = ({ name, code }) => {
         return(
             <div 
                 key={name} 
@@ -63,14 +63,14 @@ const Reference = () => {
         )
     }
 
-    const getFont = ({variable, font}) => {
+    const renderFont = ({variable, font}) => {
         return <h2 key={font} style={{fontFamily: font}}>{variable}</h2>
     }
 
     return(
         <div style={{marginTop: 500}}>
-            {colors.map(color => getColor(color))}
-            {fonts.map(font => getFont(font))}
+            {colors.map(color => renderColor(color))}
+            {fonts.map(font => renderFont(font))}
         </div>
     )
 }

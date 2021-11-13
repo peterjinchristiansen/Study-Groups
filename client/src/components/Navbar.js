@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import style from './navbar.module.css'
 
-const links = ['One', 'Two', 'Three']
+const links = ['One', 'Register', 'Login']
 
 const Navbar = () => {
     const [active, setActive] = useState(null)
@@ -12,7 +12,7 @@ const Navbar = () => {
         setActive(pathName)
     }, [])
 
-    const getLink = (link) => {
+    const renderLink = (link) => {
         const path = link.toLowerCase()
         return(
             <Link
@@ -36,7 +36,7 @@ const Navbar = () => {
                 StudyGroups
             </Link>
             <div className={style.container}>
-                {links.map(link => getLink(link))}
+                {links.map(link => renderLink(link))}
             </div>
         </div>
     )
